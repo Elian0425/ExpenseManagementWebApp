@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="'Expense Management System - Menu'"></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+  <h1 class="mb-4 text-center" th:text="'Menu'"></h1>
+
+
+  <div class="mb-5">
+    <h3 th:text="'Action'"></h3>
+    <hr>
+    <div class="d-flex flex-wrap gap-3">
+      <!-- Log Out -->
+      <form th:action="@{/logout}" method="post">
+        <button type="submit"
+                class="btn btn-danger d-flex align-items-center justify-content-center fs-4"
+                style="width: 200px; height: 150px;" th:text="'Logout'">
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Account -->
+  <div class="mb-5">
+    <h3 th:text="'Manage'"></h3>
+    <hr>
+    <div class="d-flex flex-wrap gap-3">
+      <!-- Profile -->
+      <a th:href="@{/dashboard/user/profile}"
+         class="btn btn-primary d-flex align-items-center justify-content-center fs-4"
+         style="width: 200px; height: 150px;" th:text="'Profile'">
+      </a>
+
+      <!-- Debtor Debt Status -->
+      <a th:href="@{/dashboard/debtor}"
+         class="btn btn-primary d-flex align-items-center justify-content-center fs-4"
+         style="width: 200px; height: 150px;" th:text="'Debtor Dashboard'">
+      </a>
+    </div>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>

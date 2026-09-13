@@ -1,0 +1,12 @@
+app:
+  base-url: ${DEV_BASE_URL}
+
+
+server:
+  port: ${DEV_SERVER_PORT:8084}
+
+spring:
+  datasource:
+    url: ${DEV_DB_URL}
+    username: ${DEV_DB_USERNAME}
+    password: ${DEV_DB_PASSWORD}

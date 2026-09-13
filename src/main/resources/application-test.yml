@@ -1,0 +1,11 @@
+app:
+  base-url: ${TEST_BASE_URL}
+
+server:
+  port: ${TEST_SERVER_PORT:8083}
+
+spring:
+  datasource:
+    url: ${TEST_DB_URL}
+    username: ${TEST_DB_USERNAME}
+    password: ${TEST_DB_PASSWORD}
